@@ -1,101 +1,131 @@
 /* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    background: black;
-    overflow: hidden;
-  }
-  
-  .slideshow img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 3s ease, transform 10s ease; /* Smooth fade and zoom effect */
-  }
-  
-  .slideshow img.active {
-    opacity: 1;
-    transform: scale(1.1); /* Zoom in the active slide */
-  }
-  
-  
-  /* Content Section */
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
-  
-  #dynamicText {
-    font-size: 3rem;
-    cursor: pointer;
-    animation: colorChange 5s infinite;
-  }
-  
-  #romanticMessage {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    animation: colorChange 5s infinite;
-  }
-  
-  #countdown {
-    font-size: 2rem;
-    margin-top: 20px;
-  }
-  
-  /* Color Changing Text */
-  @keyframes colorChange {
-    0% { color: red; }
-    25% { color: pink; }
-    50% { color: purple; }
-    75% { color: orange; }
-    100% { color: red; }
-  }
-  
-  /* Falling Hearts */
-  .hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  .heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: red;
-    transform: rotate(-45deg);
-    animation: fall 5s linear infinite;
-  }
-  
-  .heart:before, .heart:after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: red;
-    border-radius: 50%;
-  }
-  
-  .heart:before { top: -10px; left: 0; }
-  .heart:after { left: 10px; top: 0; }
-  
-  @keyframes fall {
-    0% { top: -10%; opacity: 1; }
-    100% { top: 110%; opacity: 0; }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  background: black;
+  overflow: hidden;
+}
 
-    
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 3s ease, transform 10s ease; /* Smooth fade and zoom effect */
+}
+
+.slideshow img.active {
+  opacity: 1;
+  transform: scale(1.1); /* Zoom in the active slide */
+}
+
+/* Content Section */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#dynamicText {
+  font-size: 3rem;
+  cursor: pointer;
+  animation: colorChange 5s infinite;
+}
+
+#romanticMessage {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: colorChange 5s infinite;
+}
+
+#countdown {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Color Changing Text */
+@keyframes colorChange {
+  0% {
+    color: red;
   }
-  
+  25% {
+    color: pink;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+
+/* Falling Hearts */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: fall 5s linear infinite;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+.heart:after {
+  left: 10px;
+  top: 0;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+.content{
+  position: absolute;
+    z-index: 999;
+    margin: 0 auto; 
+    text-align: center;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    font-family: Arial,sans-serif;
+    color: #fff;
+    width: 60%
+}
